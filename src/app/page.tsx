@@ -14,39 +14,9 @@ import {
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import imageData from '@/lib/placeholder-images.json';
 
-const carouselImages = [
-  {
-    id: 'carousel-1',
-    description: 'Welcome to Shivam Super Market - Pick N Pack',
-    imageUrl: '/carousel-images/storefront.jpeg',
-    imageHint: 'storefront exterior'
-  },
-  {
-    id: 'carousel-2',
-    description: 'Wide range of groceries, rice, and packaged foods',
-    imageUrl: '/carousel-images/grocery-aisle.jpeg',
-    imageHint: 'grocery aisle'
-  },
-  {
-    id: 'carousel-3',
-    description: 'Premium snacks, chocolates, and dry fruits',
-    imageUrl: '/carousel-images/snacks-dryfruit.jpeg',
-    imageHint: 'snacks dry fruits'
-  },
-  {
-    id: 'carousel-4',
-    description: 'Personal care, ready-to-eat meals, and more',
-    imageUrl: '/carousel-images/checkout-counter.jpeg',
-    imageHint: 'checkout counter'
-  },
-  {
-    id: 'carousel-5',
-    description: 'Quality bags, backpacks, and footwear',
-    imageUrl: '/carousel-images/bags-footwear.jpeg',
-    imageHint: 'bags footwear'
-  }
-];
+const carouselImages = imageData.carousel;
 
 const features = [
   {

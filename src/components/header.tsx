@@ -64,7 +64,7 @@ export default function Header() {
                   <div className="flex items-center justify-between p-4 border-b">
                      <Link href="/" className="flex items-center gap-2 font-bold font-headline text-lg" onClick={() => setMobileMenuOpen(false)}>
                         <ShoppingBasket className="h-6 w-6 text-primary" />
-                        <span>Shivam Market</span>
+                        <span>Shivam Super Market</span>
                     </Link>
                     <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
                         <X className="h-6 w-6" />
