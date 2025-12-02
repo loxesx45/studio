@@ -79,7 +79,7 @@ export default function Home() {
             </div>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <a href="tel:+910000000000">
+                <a href="tel:+919789016162">
                   <Phone className="mr-2 h-5 w-5" /> Call Now
                 </a>
               </Button>
@@ -89,7 +89,7 @@ export default function Home() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/contact">
+                <Link href="https://maps.app.goo.gl/i8Np7TFWsh168XiP6">
                   <MapPin className="mr-2 h-5 w-5" /> Locate Us
                 </Link>
               </Button>
