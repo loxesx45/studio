@@ -1,15 +1,14 @@
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 const productCategories = [
-  { id: 'groceries', name: 'Groceries' },
-  { id: 'vegetables-fruits', name: 'Vegetables & Fruits' },
-  { id: 'household-essentials', name: 'Household Essentials' },
-  { id: 'snacks-beverages', name: 'Snacks & Beverages' },
-  { id: 'personal-care', name: 'Personal Care' },
+  { id: 'groceries', name: 'Groceries', imageUrl: '/carousel-images/grocery-aisle.jpg', imageHint: 'grocery aisle' },
+  { id: 'vegetables-fruits', name: 'Vegetables & Fruits', imageUrl: '/carousel-images/fresh-produce.jpg', imageHint: 'fresh produce' },
+  { id: 'household-essentials', name: 'Household Essentials', imageUrl: '/carousel-images/cleaning-supplies.jpg', imageHint: 'cleaning supplies' },
+  { id: 'snacks-beverages', name: 'Snacks & Beverages', imageUrl: '/carousel-images/snacks-beverages.jpg', imageHint: 'snacks beverages' },
+  { id: 'personal-care', name: 'Personal Care', imageUrl: 'https://images.unsplash.com/photo-1720118492585-67892cc82f3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb25hbCUyMGNhcmV8ZW58MHx8fHwxNzY0Njc4Nzc3fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'personal care' },
 ];
 
 export default function ProductsPage() {
@@ -25,20 +24,17 @@ export default function ProductsPage() {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {productCategories.map((category) => {
-            const image = PlaceHolderImages.find(img => img.id === category.id);
             return (
               <Link href="#" key={category.id} className="group">
                 <Card className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                   <div className="relative aspect-video">
-                    {image && (
-                      <Image
-                        src={image.imageUrl}
-                        alt={image.description}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        data-ai-hint={image.imageHint}
-                      />
-                    )}
+                    <Image
+                      src={category.imageUrl}
+                      alt={category.name}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      data-ai-hint={category.imageHint}
+                    />
                   </div>
                   <CardHeader>
                     <CardTitle className="font-headline text-xl flex items-center justify-between">

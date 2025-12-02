@@ -14,7 +14,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { carouselImages } from '@/lib/placeholder-images';
 
 const features = [
   {
@@ -104,16 +104,15 @@ export default function Home() {
             }}
          >
           <CarouselContent>
-            {PlaceHolderImages.map((image) => (
-              <CarouselItem key={image.id}>
+            {carouselImages.map((image, index) => (
+              <CarouselItem key={index}>
                 <div className="relative rounded-xl shadow-2xl overflow-hidden aspect-[2/1]">
                   <Image
                     src={image.imageUrl}
                     alt={image.description}
                     fill
                     className="object-cover"
-                    data-ai-hint={image.imageHint}
-                    priority={image.id === 'hero'}
+                    priority={index === 0}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-6">
                     <p className="text-white text-lg font-semibold">{image.description}</p>
