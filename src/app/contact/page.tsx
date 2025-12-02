@@ -88,8 +88,16 @@ export default function ContactPage() {
                         </div>
                     </div>
                 </div>
-                 <div className="mt-8 rounded-lg overflow-hidden bg-muted aspect-video flex items-center justify-center">
-                    <p className="text-muted-foreground font-semibold">Map Placeholder</p>
+                 <div className="mt-8 rounded-lg overflow-hidden bg-muted aspect-video">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31065.991275338165!2d80.26354965!3d13.26668705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a527c0f68c6b753%3A0x6733355f381f25e!2sMinjur%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sus!4v1628889111818!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style={{ border: 0 }} 
+                        allowFullScreen={true} 
+                        loading="lazy"
+                        title="Google Map of Minjur"
+                    ></iframe>
                  </div>
             </div>
           <Card>

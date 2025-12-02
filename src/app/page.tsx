@@ -1,13 +1,20 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Phone, MapPin } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-
-const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
 
 const features = [
   {
@@ -89,21 +96,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Hero Image Section */}
+      {/* Hero Image Carousel Section */}
       <section className="container mx-auto px-4 md:px-6 -mt-16 md:-mt-24 z-10">
-        <div className="relative rounded-xl shadow-2xl overflow-hidden aspect-[2/1]">
-          {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              fill
-              className="object-cover"
-              data-ai-hint={heroImage.imageHint}
-              priority
-            />
-          )}
-           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-        </div>
+         <Carousel className="w-full"
+            opts={{
+                loop: true,
+            }}
+         >
+          <CarouselContent>
+            {PlaceHolderImages.map((image) => (
+              <CarouselItem key={image.id}>
+                <div className="relative rounded-xl shadow-2xl overflow-hidden aspect-[2/1]">
+                  <Image
+                    src={image.imageUrl}
+                    alt={image.description}
+                    fill
+                    className="object-cover"
+                    data-ai-hint={image.imageHint}
+                    priority={image.id === 'hero'}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-6">
+                    <p className="text-white text-lg font-semibold">{image.description}</p>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
+          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
+        </Carousel>
       </section>
 
       {/* Features Section */}
