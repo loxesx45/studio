@@ -88,16 +88,24 @@ export default function ContactPage() {
                         </div>
                     </div>
                 </div>
+                 {/* Replaced map link section below */}
                  <div className="mt-8 rounded-lg overflow-hidden bg-muted aspect-video">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31065.991275338165!2d80.26354965!3d13.26668705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a527c0f68c6b753%3A0x6733355f381f25e!2sMinjur%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sus!4v1628889111818!5m2!1sen!2sus" 
-                        width="100%" 
-                        height="100%" 
-                        style={{ border: 0 }} 
-                        allowFullScreen={true} 
-                        loading="lazy"
-                        title="Google Map of Minjur"
-                    ></iframe>
+                   <div className="mapouter">
+                     <div className="gmap_canvas">
+                       <iframe 
+                         className="gmap_iframe" 
+                         frameborder="0" 
+                         scrolling="no" 
+                         marginheight="0" 
+                         marginwidth="0" 
+                         src="https://maps.google.com/maps?width=600&height=400&hl=en&q=SHIVAM SUPER MARKET,94, Vellalar Street, GANDHI ROAD, Minjur, Tamil Nadu 601203&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+                       ></iframe>
+                       <a href="https://embed-googlemap.com">google maps embed</a>
+                     </div>
+                     <style>
+                       {`.mapouter{position:relative;text-align:right;width:100%;height:100%;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:100%;}.gmap_iframe {width:100%!important;height:100%!important;}`}
+                     </style>
+                   </div>
                  </div>
             </div>
           <Card>
