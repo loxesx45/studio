@@ -69,22 +69,22 @@ export default function ContactPage() {
                         <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                         <div>
                             <h3 className="font-semibold text-lg">Store Address</h3>
-                            <p className="text-muted-foreground">Minjur, Tamil Nadu, India</p>
-                            <p className="text-sm text-muted-foreground">(Exact address placeholder)</p>
+                            <p className="text-muted-foreground">94, Vellalar Street, GANDHI ROAD</p>
+                            <p className="text-sm text-muted-foreground">Minjur, Tamil Nadu 601203</p>
                         </div>
                     </div>
                      <div className="flex items-start gap-4">
                         <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                         <div>
                             <h3 className="font-semibold text-lg">Phone Number</h3>
-                            <a href="tel:+910000000000" className="text-muted-foreground hover:text-primary transition-colors">+91 XXXX-XXXXXX (Placeholder)</a>
+                            <a href="tel:+919789016162" className="text-muted-foreground hover:text-primary transition-colors">+91 9789016162</a>
                         </div>
                     </div>
                      <div className="flex items-start gap-4">
                         <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                         <div>
                             <h3 className="font-semibold text-lg">Email Address</h3>
-                            <a href="mailto:contact@sivamsupermarket.com" className="text-muted-foreground hover:text-primary transition-colors">contact@sivamsupermarket.com (Placeholder)</a>
+                            <a href="mailto:shivamsupermarket2021@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">shivamsupermarket2021@gmail.com</a>
                         </div>
                     </div>
                 </div>
