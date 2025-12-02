@@ -1,12 +1,8 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
-
-const aboutImage = {
-  imageUrl: 'https://images.unsplash.com/photo-1752650733890-8d99f5a4bc70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmcmllbmRseSUyMHN0YWZmfGVufDB8fHx8MTc2NDY3ODc3OHww&ixlib=rb-4.1.0&q=80&w=1080',
-  description: 'Friendly staff member helping a customer.',
-  imageHint: 'friendly staff'
-};
+import imageData from '@/lib/placeholder-images.json';
+const aboutImage = imageData.about;
 
 const commitments = [
   "Unwavering Reliability",
@@ -55,7 +51,7 @@ export default function AboutPage() {
                 src={aboutImage.imageUrl}
                 alt={aboutImage.description}
                 width={500}
-                height={350}
+                height={375}
                 className="rounded-xl shadow-lg object-cover w-full h-full"
                 data-ai-hint={aboutImage.imageHint}
               />

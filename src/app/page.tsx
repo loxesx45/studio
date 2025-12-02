@@ -14,7 +14,39 @@ import {
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { carouselImages } from '@/lib/placeholder-images';
+
+const carouselImages = [
+  {
+    id: 'carousel-1',
+    description: 'A bright and welcoming supermarket storefront.',
+    imageUrl: '/carousel-images/carousel-1.jpg',
+    imageHint: 'storefront exterior'
+  },
+  {
+    id: 'carousel-2',
+    description: 'Aisle with shelves full of various grocery items.',
+    imageUrl: '/carousel-images/carousel-2.jpg',
+    imageHint: 'grocery aisle'
+  },
+  {
+    id: 'carousel-3',
+    description: 'Fresh and colorful vegetables and fruits on display.',
+    imageUrl: '/carousel-images/carousel-3.jpg',
+    imageHint: 'fresh produce'
+  },
+  {
+    id: 'carousel-4',
+    description: 'Cleaning supplies and other household items.',
+    imageUrl: '/carousel-images/carousel-4.jpg',
+    imageHint: 'cleaning supplies'
+  },
+  {
+    id: 'carousel-5',
+    description: 'Assortment of snacks and beverages.',
+    imageUrl: '/carousel-images/carousel-5.jpg',
+    imageHint: 'snacks beverages'
+  }
+];
 
 const features = [
   {
@@ -105,13 +137,14 @@ export default function Home() {
          >
           <CarouselContent>
             {carouselImages.map((image, index) => (
-              <CarouselItem key={index}>
+              <CarouselItem key={image.id}>
                 <div className="relative rounded-xl shadow-2xl overflow-hidden aspect-[2/1]">
                   <Image
                     src={image.imageUrl}
                     alt={image.description}
                     fill
                     className="object-cover"
+                    data-ai-hint={image.imageHint}
                     priority={index === 0}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-6">

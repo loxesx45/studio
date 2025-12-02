@@ -2,14 +2,9 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import imageData from '@/lib/placeholder-images.json';
 
-const productCategories = [
-  { id: 'groceries', name: 'Groceries', imageUrl: '/carousel-images/grocery-aisle.jpg', imageHint: 'grocery aisle' },
-  { id: 'vegetables-fruits', name: 'Vegetables & Fruits', imageUrl: '/carousel-images/fresh-produce.jpg', imageHint: 'fresh produce' },
-  { id: 'household-essentials', name: 'Household Essentials', imageUrl: '/carousel-images/cleaning-supplies.jpg', imageHint: 'cleaning supplies' },
-  { id: 'snacks-beverages', name: 'Snacks & Beverages', imageUrl: '/carousel-images/snacks-beverages.jpg', imageHint: 'snacks beverages' },
-  { id: 'personal-care', name: 'Personal Care', imageUrl: 'https://images.unsplash.com/photo-1720118492585-67892cc82f3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb25hbCUyMGNhcmV8ZW58MHx8fHwxNzY0Njc4Nzc3fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'personal care' },
-];
+const productCategories = Object.values(imageData.products);
 
 export default function ProductsPage() {
   return (
@@ -31,7 +26,8 @@ export default function ProductsPage() {
                     <Image
                       src={category.imageUrl}
                       alt={category.name}
-                      fill
+                      width={400}
+                      height={300}
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       data-ai-hint={category.imageHint}
                     />
