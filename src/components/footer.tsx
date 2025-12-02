@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2 font-bold font-headline text-xl">
               <ShoppingBasket className="h-7 w-7 text-primary" />
-              Sivam Supermarket
+              Shivam Super Market
             </Link>
             <p className="text-muted-foreground">Your friendly neighborhood store in Minjur, Tamil Nadu.</p>
           </div>
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} Sivam Supermarket. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Shivam Super Market. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

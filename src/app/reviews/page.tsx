@@ -10,7 +10,7 @@ import { Star, StarHalf } from "lucide-react"
 
 const reviews = [
   {
-    text: "Sivam Super Market is a worthy market in Minjur.",
+    text: "Shivam Super Market is a worthy market in Minjur.",
     author: "Valued Customer",
     rating: 5,
     type: 'positive'

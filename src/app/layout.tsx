@@ -7,7 +7,7 @@ import Footer from '@/components/footer';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Sivam Market Online',
+  title: 'Shivam Super Market - Pick N Pack',
   description: 'Your Friendly Neighborhood Store in Minjur',
 };
 
