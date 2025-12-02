@@ -18,33 +18,33 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const carouselImages = [
   {
     id: 'carousel-1',
-    description: 'A bright and welcoming supermarket storefront.',
-    imageUrl: '/carousel-images/carousel-1.jpg',
+    description: 'Welcome to Shivam Super Market - Pick N Pack',
+    imageUrl: '/carousel-images/storefront.jpeg',
     imageHint: 'storefront exterior'
   },
   {
     id: 'carousel-2',
-    description: 'Aisle with shelves full of various grocery items.',
-    imageUrl: '/carousel-images/carousel-2.jpg',
+    description: 'Wide range of groceries, rice, and packaged foods',
+    imageUrl: '/carousel-images/grocery-aisle.jpeg',
     imageHint: 'grocery aisle'
   },
   {
     id: 'carousel-3',
-    description: 'Fresh and colorful vegetables and fruits on display.',
-    imageUrl: '/carousel-images/carousel-3.jpg',
-    imageHint: 'fresh produce'
+    description: 'Premium snacks, chocolates, and dry fruits',
+    imageUrl: '/carousel-images/snacks-dryfruit.jpeg',
+    imageHint: 'snacks dry fruits'
   },
   {
     id: 'carousel-4',
-    description: 'Cleaning supplies and other household items.',
-    imageUrl: '/carousel-images/carousel-4.jpg',
-    imageHint: 'cleaning supplies'
+    description: 'Personal care, ready-to-eat meals, and more',
+    imageUrl: '/carousel-images/checkout-counter.jpeg',
+    imageHint: 'checkout counter'
   },
   {
     id: 'carousel-5',
-    description: 'Assortment of snacks and beverages.',
-    imageUrl: '/carousel-images/carousel-5.jpg',
-    imageHint: 'snacks beverages'
+    description: 'Quality bags, backpacks, and footwear',
+    imageUrl: '/carousel-images/bags-footwear.jpeg',
+    imageHint: 'bags footwear'
   }
 ];
 
@@ -93,10 +93,10 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tight text-foreground">
-              Sivam Supermarket
+              Shivam Super Market
             </h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground font-headline">
-              Your Friendly Neighborhood Store in Minjur
+              Pick N Pack - Your Friendly Neighborhood Store in Minjur
             </p>
             <p className="mt-6 max-w-xl mx-auto text-base md:text-lg text-muted-foreground">
               Fresh groceries, household essentials, and quick service you can rely on.
